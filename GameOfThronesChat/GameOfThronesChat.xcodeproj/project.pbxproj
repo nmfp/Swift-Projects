@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F244B4B1F9B9E7A0058DF39 /* ChatInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F244B4A1F9B9E7A0058DF39 /* ChatInputContainerView.swift */; };
+		1F30E9D01F8BFC4D00211F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E9CF1F8BFC4D00211F0B /* AppDelegate.swift */; };
+		1F30E9D21F8BFC4D00211F0B /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E9D11F8BFC4D00211F0B /* MessagesViewController.swift */; };
+		1F30E9D51F8BFC4D00211F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F30E9D31F8BFC4D00211F0B /* Main.storyboard */; };
+		1F30E9D71F8BFC4D00211F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F30E9D61F8BFC4D00211F0B /* Assets.xcassets */; };
+		1F30E9DA1F8BFC4D00211F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F30E9D81F8BFC4D00211F0B /* LaunchScreen.storyboard */; };
+		1F30E9E51F8BFC4D00211F0B /* GameOfThronesChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E9E41F8BFC4D00211F0B /* GameOfThronesChatTests.swift */; };
+		1F30E9F01F8BFC4D00211F0B /* GameOfThronesChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E9EF1F8BFC4D00211F0B /* GameOfThronesChatUITests.swift */; };
+		1F30E9FF1F8C028200211F0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E9FE1F8C028200211F0B /* LoginViewController.swift */; };
+		1FA334CE1F8EA62B0048BC6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FA334CD1F8EA48E0048BC6C /* GoogleService-Info.plist */; };
+		1FA334D01F8FF2C40048BC6C /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA334CF1F8FF2C40048BC6C /* NewMessageController.swift */; };
+		1FA334D31F9001750048BC6C /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA334D21F9001750048BC6C /* MyUser.swift */; };
+		1FA334D51F90CCB30048BC6C /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA334D41F90CCB30048BC6C /* LoginController+handlers.swift */; };
+		1FA334D91F910F770048BC6C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA334D81F910F770048BC6C /* Extensions.swift */; };
+		1FD57AE81F922F21001FF3F6 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD57AE71F922F21001FF3F6 /* ChatLogController.swift */; };
+		1FD57AEA1F92821C001FF3F6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD57AE91F92821C001FF3F6 /* Message.swift */; };
+		1FD57AED1F929E30001FF3F6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD57AEC1F929E30001FF3F6 /* UserCell.swift */; };
+		1FD57AEF1F95099A001FF3F6 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD57AEE1F95099A001FF3F6 /* ChatMessageCell.swift */; };
+		8FA02DF78D5B3521D6612F0D /* Pods_GameOfThronesChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE446C145E71F1DD5B02D29 /* Pods_GameOfThronesChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F30E9E11F8BFC4D00211F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30E9C41F8BFC4D00211F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F30E9CB1F8BFC4D00211F0B;
+			remoteInfo = GameOfThronesChat;
+		};
+		1F30E9EC1F8BFC4D00211F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30E9C41F8BFC4D00211F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F30E9CB1F8BFC4D00211F0B;
+			remoteInfo = GameOfThronesChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AE446C145E71F1DD5B02D29 /* Pods_GameOfThronesChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfThronesChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F244B4A1F9B9E7A0058DF39 /* ChatInputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputContainerView.swift; sourceTree = "<group>"; };
+		1F30E9CC1F8BFC4D00211F0B /* GameOfThronesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThronesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F30E9CF1F8BFC4D00211F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F30E9D11F8BFC4D00211F0B /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		1F30E9D41F8BFC4D00211F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F30E9D61F8BFC4D00211F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F30E9D91F8BFC4D00211F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F30E9DB1F8BFC4D00211F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F30E9E01F8BFC4D00211F0B /* GameOfThronesChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfThronesChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F30E9E41F8BFC4D00211F0B /* GameOfThronesChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesChatTests.swift; sourceTree = "<group>"; };
+		1F30E9E61F8BFC4D00211F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F30E9EB1F8BFC4D00211F0B /* GameOfThronesChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfThronesChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F30E9EF1F8BFC4D00211F0B /* GameOfThronesChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfThronesChatUITests.swift; sourceTree = "<group>"; };
+		1F30E9F11F8BFC4D00211F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F30E9FE1F8C028200211F0B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F30EA001F8D4F3300211F0B /* wolf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wolf.jpg; sourceTree = "<group>"; };
+		1FA334CD1F8EA48E0048BC6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FA334CF1F8FF2C40048BC6C /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		1FA334D21F9001750048BC6C /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
+		1FA334D41F90CCB30048BC6C /* LoginController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
+		1FA334D81F910F770048BC6C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1FD57AE71F922F21001FF3F6 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		1FD57AE91F92821C001FF3F6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1FD57AEC1F929E30001FF3F6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		1FD57AEE1F95099A001FF3F6 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		86C329C698E5798E77B29EB1 /* Pods-GameOfThronesChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfThronesChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfThronesChat/Pods-GameOfThronesChat.release.xcconfig"; sourceTree = "<group>"; };
+		C3648285F4EA64A1836526F7 /* Pods-GameOfThronesChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfThronesChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfThronesChat/Pods-GameOfThronesChat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F30E9C91F8BFC4D00211F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA02DF78D5B3521D6612F0D /* Pods_GameOfThronesChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9DD1F8BFC4D00211F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9E81F8BFC4D00211F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F30E9C31F8BFC4D00211F0B = {
+			isa = PBXGroup;
+			children = (
+				1F30E9CE1F8BFC4D00211F0B /* GameOfThronesChat */,
+				1F30E9E31F8BFC4D00211F0B /* GameOfThronesChatTests */,
+				1F30E9EE1F8BFC4D00211F0B /* GameOfThronesChatUITests */,
+				1F30E9CD1F8BFC4D00211F0B /* Products */,
+				7FED822C4E90EFD5257229FA /* Pods */,
+				DC65A1231407F731B28F7D55 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F30E9CD1F8BFC4D00211F0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F30E9CC1F8BFC4D00211F0B /* GameOfThronesChat.app */,
+				1F30E9E01F8BFC4D00211F0B /* GameOfThronesChatTests.xctest */,
+				1F30E9EB1F8BFC4D00211F0B /* GameOfThronesChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F30E9CE1F8BFC4D00211F0B /* GameOfThronesChat */ = {
+			isa = PBXGroup;
+			children = (
+				1FD57AEB1F929E19001FF3F6 /* View */,
+				1FA334D71F910F5F0048BC6C /* Helpers */,
+				1FA334D11F90014F0048BC6C /* Model */,
+				1FA334CD1F8EA48E0048BC6C /* GoogleService-Info.plist */,
+				1F30E9FD1F8BFD3E00211F0B /* controller */,
+				1F30E9CF1F8BFC4D00211F0B /* AppDelegate.swift */,
+				1F30E9D31F8BFC4D00211F0B /* Main.storyboard */,
+				1F30EA001F8D4F3300211F0B /* wolf.jpg */,
+				1F30E9D61F8BFC4D00211F0B /* Assets.xcassets */,
+				1F30E9D81F8BFC4D00211F0B /* LaunchScreen.storyboard */,
+				1F30E9DB1F8BFC4D00211F0B /* Info.plist */,
+			);
+			path = GameOfThronesChat;
+			sourceTree = "<group>";
+		};
+		1F30E9E31F8BFC4D00211F0B /* GameOfThronesChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F30E9E41F8BFC4D00211F0B /* GameOfThronesChatTests.swift */,
+				1F30E9E61F8BFC4D00211F0B /* Info.plist */,
+			);
+			path = GameOfThronesChatTests;
+			sourceTree = "<group>";
+		};
+		1F30E9EE1F8BFC4D00211F0B /* GameOfThronesChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F30E9EF1F8BFC4D00211F0B /* GameOfThronesChatUITests.swift */,
+				1F30E9F11F8BFC4D00211F0B /* Info.plist */,
+			);
+			path = GameOfThronesChatUITests;
+			sourceTree = "<group>";
+		};
+		1F30E9FD1F8BFD3E00211F0B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F30E9FE1F8C028200211F0B /* LoginViewController.swift */,
+				1FA334D41F90CCB30048BC6C /* LoginController+handlers.swift */,
+				1F30E9D11F8BFC4D00211F0B /* MessagesViewController.swift */,
+				1FA334CF1F8FF2C40048BC6C /* NewMessageController.swift */,
+				1FD57AE71F922F21001FF3F6 /* ChatLogController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		1FA334D11F90014F0048BC6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FA334D21F9001750048BC6C /* MyUser.swift */,
+				1FD57AE91F92821C001FF3F6 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FA334D71F910F5F0048BC6C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1FA334D81F910F770048BC6C /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1FD57AEB1F929E19001FF3F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FD57AEC1F929E30001FF3F6 /* UserCell.swift */,
+				1FD57AEE1F95099A001FF3F6 /* ChatMessageCell.swift */,
+				1F244B4A1F9B9E7A0058DF39 /* ChatInputContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FED822C4E90EFD5257229FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3648285F4EA64A1836526F7 /* Pods-GameOfThronesChat.debug.xcconfig */,
+				86C329C698E5798E77B29EB1 /* Pods-GameOfThronesChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC65A1231407F731B28F7D55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AE446C145E71F1DD5B02D29 /* Pods_GameOfThronesChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F30E9CB1F8BFC4D00211F0B /* GameOfThronesChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F30E9F41F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChat" */;
+			buildPhases = (
+				F110AA7497E6656E7C134C89 /* [CP] Check Pods Manifest.lock */,
+				1F30E9C81F8BFC4D00211F0B /* Sources */,
+				1F30E9C91F8BFC4D00211F0B /* Frameworks */,
+				1F30E9CA1F8BFC4D00211F0B /* Resources */,
+				48CCCA55AC98634C51662098 /* [CP] Embed Pods Frameworks */,
+				C66D2DE91AA9B110CD24CDF6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameOfThronesChat;
+			productName = GameOfThronesChat;
+			productReference = 1F30E9CC1F8BFC4D00211F0B /* GameOfThronesChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F30E9DF1F8BFC4D00211F0B /* GameOfThronesChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F30E9F71F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChatTests" */;
+			buildPhases = (
+				1F30E9DC1F8BFC4D00211F0B /* Sources */,
+				1F30E9DD1F8BFC4D00211F0B /* Frameworks */,
+				1F30E9DE1F8BFC4D00211F0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F30E9E21F8BFC4D00211F0B /* PBXTargetDependency */,
+			);
+			name = GameOfThronesChatTests;
+			productName = GameOfThronesChatTests;
+			productReference = 1F30E9E01F8BFC4D00211F0B /* GameOfThronesChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F30E9EA1F8BFC4D00211F0B /* GameOfThronesChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F30E9FA1F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChatUITests" */;
+			buildPhases = (
+				1F30E9E71F8BFC4D00211F0B /* Sources */,
+				1F30E9E81F8BFC4D00211F0B /* Frameworks */,
+				1F30E9E91F8BFC4D00211F0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F30E9ED1F8BFC4D00211F0B /* PBXTargetDependency */,
+			);
+			name = GameOfThronesChatUITests;
+			productName = GameOfThronesChatUITests;
+			productReference = 1F30E9EB1F8BFC4D00211F0B /* GameOfThronesChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F30E9C41F8BFC4D00211F0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Nuno Pereira";
+				TargetAttributes = {
+					1F30E9CB1F8BFC4D00211F0B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					1F30E9DF1F8BFC4D00211F0B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1F30E9CB1F8BFC4D00211F0B;
+					};
+					1F30E9EA1F8BFC4D00211F0B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1F30E9CB1F8BFC4D00211F0B;
+					};
+				};
+			};
+			buildConfigurationList = 1F30E9C71F8BFC4D00211F0B /* Build configuration list for PBXProject "GameOfThronesChat" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F30E9C31F8BFC4D00211F0B;
+			productRefGroup = 1F30E9CD1F8BFC4D00211F0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F30E9CB1F8BFC4D00211F0B /* GameOfThronesChat */,
+				1F30E9DF1F8BFC4D00211F0B /* GameOfThronesChatTests */,
+				1F30E9EA1F8BFC4D00211F0B /* GameOfThronesChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F30E9CA1F8BFC4D00211F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F30E9DA1F8BFC4D00211F0B /* LaunchScreen.storyboard in Resources */,
+				1FA334CE1F8EA62B0048BC6C /* GoogleService-Info.plist in Resources */,
+				1F30E9D71F8BFC4D00211F0B /* Assets.xcassets in Resources */,
+				1F30E9D51F8BFC4D00211F0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9DE1F8BFC4D00211F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9E91F8BFC4D00211F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48CCCA55AC98634C51662098 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameOfThronesChat/Pods-GameOfThronesChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfThronesChat/Pods-GameOfThronesChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C66D2DE91AA9B110CD24CDF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfThronesChat/Pods-GameOfThronesChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F110AA7497E6656E7C134C89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameOfThronesChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F30E9C81F8BFC4D00211F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD57AE81F922F21001FF3F6 /* ChatLogController.swift in Sources */,
+				1F244B4B1F9B9E7A0058DF39 /* ChatInputContainerView.swift in Sources */,
+				1FA334D01F8FF2C40048BC6C /* NewMessageController.swift in Sources */,
+				1F30E9FF1F8C028200211F0B /* LoginViewController.swift in Sources */,
+				1FD57AEA1F92821C001FF3F6 /* Message.swift in Sources */,
+				1FA334D51F90CCB30048BC6C /* LoginController+handlers.swift in Sources */,
+				1F30E9D21F8BFC4D00211F0B /* MessagesViewController.swift in Sources */,
+				1FA334D31F9001750048BC6C /* MyUser.swift in Sources */,
+				1FD57AEF1F95099A001FF3F6 /* ChatMessageCell.swift in Sources */,
+				1F30E9D01F8BFC4D00211F0B /* AppDelegate.swift in Sources */,
+				1FD57AED1F929E30001FF3F6 /* UserCell.swift in Sources */,
+				1FA334D91F910F770048BC6C /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9DC1F8BFC4D00211F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F30E9E51F8BFC4D00211F0B /* GameOfThronesChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F30E9E71F8BFC4D00211F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F30E9F01F8BFC4D00211F0B /* GameOfThronesChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F30E9E21F8BFC4D00211F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F30E9CB1F8BFC4D00211F0B /* GameOfThronesChat */;
+			targetProxy = 1F30E9E11F8BFC4D00211F0B /* PBXContainerItemProxy */;
+		};
+		1F30E9ED1F8BFC4D00211F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F30E9CB1F8BFC4D00211F0B /* GameOfThronesChat */;
+			targetProxy = 1F30E9EC1F8BFC4D00211F0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F30E9D31F8BFC4D00211F0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F30E9D41F8BFC4D00211F0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F30E9D81F8BFC4D00211F0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F30E9D91F8BFC4D00211F0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F30E9F21F8BFC4D00211F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F30E9F31F8BFC4D00211F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F30E9F51F8BFC4D00211F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3648285F4EA64A1836526F7 /* Pods-GameOfThronesChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JBEYETDGSB;
+				INFOPLIST_FILE = GameOfThronesChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F30E9F61F8BFC4D00211F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C329C698E5798E77B29EB1 /* Pods-GameOfThronesChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JBEYETDGSB;
+				INFOPLIST_FILE = GameOfThronesChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F30E9F81F8BFC4D00211F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GameOfThronesChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfThronesChat.app/GameOfThronesChat";
+			};
+			name = Debug;
+		};
+		1F30E9F91F8BFC4D00211F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GameOfThronesChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOfThronesChat.app/GameOfThronesChat";
+			};
+			name = Release;
+		};
+		1F30E9FB1F8BFC4D00211F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GameOfThronesChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameOfThronesChat;
+			};
+			name = Debug;
+		};
+		1F30E9FC1F8BFC4D00211F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GameOfThronesChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nMfpereira.GameOfThronesChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameOfThronesChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F30E9C71F8BFC4D00211F0B /* Build configuration list for PBXProject "GameOfThronesChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F30E9F21F8BFC4D00211F0B /* Debug */,
+				1F30E9F31F8BFC4D00211F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F30E9F41F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F30E9F51F8BFC4D00211F0B /* Debug */,
+				1F30E9F61F8BFC4D00211F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F30E9F71F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F30E9F81F8BFC4D00211F0B /* Debug */,
+				1F30E9F91F8BFC4D00211F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F30E9FA1F8BFC4D00211F0B /* Build configuration list for PBXNativeTarget "GameOfThronesChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F30E9FB1F8BFC4D00211F0B /* Debug */,
+				1F30E9FC1F8BFC4D00211F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F30E9C41F8BFC4D00211F0B /* Project object */;
+}
