@@ -9,22 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, URLSessionDownloadDelegate {
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print("Finished downloading file")
-    }
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        
-        //percentagem do progresso ja feito
-        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-        
-        //actualizar a linha da animacao consoante a percentagem
-        DispatchQueue.main.async {
-            self.percentageLabel.text = "\(Int(percentage * 100))%"
-            self.shapeLayer.strokeEnd = percentage
-        }
-        
-        print(percentage)
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     let percentageLabel: UILabel = {
@@ -33,37 +20,42 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         label.textAlignment = .center
         label.text = "Start"
         label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.textColor = .white
         return label
     }()
  
-    let shapeLayer = CAShapeLayer()
+    var shapeLayer: CAShapeLayer?
+    var pulsatingLayer: CAShapeLayer?
     
+    func setupNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    @objc func handleEnterForeground() {
+        animatePulsatingLayer()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.backgroundColor
         
-        view.addSubview(percentageLabel)
-        percentageLabel.center = view.center
-   
-        //Secondary method with some repeated code just for better understanding
-        createMyTrackLayer()
+        //como as animacoes tem um bug em que quando a aplicacao e posta em background e em seguida em foreground a animacao deixa de funcionar
+        //coloca-se um observer a escuta de quando a aplicacao entra em foreground e em seguida da inicio a animacao novamente
+        setupNotificationObservers()
+        
+        ////////Pulsating Layer/////////
+        pulsatingLayer = createMyCircularLayer(strokeColor: UIColor.clear, fillColor: UIColor.pulsatingFillColor)
+        guard let pulsatingLayer = pulsatingLayer else {return}
+        view.layer.addSublayer(pulsatingLayer)
+        
+         animatePulsatingLayer()
+        ////////////////////////////////
+        
+        let trackLayer = createMyCircularLayer(strokeColor: UIColor.trackStrokeColor, fillColor: .backgroundColor)
+        view.layer.addSublayer(trackLayer)
+        
+        shapeLayer = createMyCircularLayer(strokeColor: UIColor.outlineStrokeColor, fillColor: .clear)
 
-//        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true);
-        shapeLayer.path = circularPath.cgPath
-        
-        //Definir a posicao no centro do ecra
-        shapeLayer.position = view.center
-        
-        //Criar uma linha da parte externa do circulo com cor vermelha e 10px
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
-        
-        //Alterar a cor do centro do circulo, ou seja, a parte interior da Stroke
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        
-        //Definir o aspecto das terminacoes da linha a desenhar. Por defeito as terminacoes sao rectangular, neste caso sao postas circulares
-        shapeLayer.lineCap = kCALineCapRound
-        
+        guard let shapeLayer = self.shapeLayer else {return}
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         
         //ao definir esta propriedade a zero faz com que a linha desapareca do ecra para se poder fazer a animacao
@@ -71,13 +63,31 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         
         view.layer.addSublayer(shapeLayer)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        view.addSubview(percentageLabel)
+        percentageLabel.center = view.center
+    }
+    
+    func animatePulsatingLayer() {
+        //A key que define que a animacao consiste numa alteracao da escala
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        
+        animation.toValue = 1.5
+        animation.duration = 0.8
+        //Tipo de timming da animacao, neste caso, rapido no inicio e lento no fim
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        //Define que a animacao tambem acontece no sentido inverso
+        animation.autoreverses = true
+        //Define que a animacao ocorre infinitamente
+        animation.repeatCount = Float.infinity
+        
+        pulsatingLayer?.add(animation, forKey: "pulsing")
     }
 
-//    let urlString = "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_5mb.mp4"
-    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+    let urlString = "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_5mb.mp4"
     
     func beginDownloadingFile() {
-        
+        guard let shapeLayer = self.shapeLayer else {return}
         shapeLayer.strokeEnd = 0
         //Configuracao default para urlSession
         let configuration = URLSessionConfiguration.default
@@ -106,27 +116,46 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         basicAnimation.isRemovedOnCompletion = false
         
         //Adicionar a animacao à target layer
+        guard let shapeLayer = self.shapeLayer else {return}
         shapeLayer.add(basicAnimation, forKey: "cenasAnimadas")
     }
     
     @objc func handleTap() {
-        
         beginDownloadingFile()
-        
 //        animateCircle()
     }
 
-    func createMyTrackLayer() {
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+    func createMyCircularLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer{
+        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
-        let trackLayer = CAShapeLayer()
-        trackLayer.strokeColor = UIColor(red: 160/255, green: 101/255, blue: 133/255, alpha: 1).cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.path = circularPath.cgPath
+        let layer = CAShapeLayer()
+        layer.path = circularPath.cgPath
+        //Criar uma linha da parte externa do circulo com cor vermelha e 10px
+        layer.strokeColor = strokeColor.cgColor
+        layer.lineWidth = 20
+        //Alterar a cor do centro do circulo, ou seja, a parte interior da Stroke
+        layer.fillColor = fillColor.cgColor
+        //Definir o aspecto das terminacoes da linha a desenhar. Por defeito as terminacoes sao rectangular, neste caso sao postas circulares
+        layer.lineCap = kCALineCapRound
         //Definir a posicao no centro do ecra
-        trackLayer.position = view.center
-        view.layer.addSublayer(trackLayer)
+        layer.position = view.center
+        return layer
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("Finished downloading file")
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        guard let shapeLayer = shapeLayer else {return}
+        //percentagem do progresso ja feito
+        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+        
+        //actualizar a linha da animacao consoante a percentagem
+        DispatchQueue.main.async {
+            self.percentageLabel.text = "\(Int(percentage * 100))%"
+            shapeLayer.strokeEnd = percentage
+        }
     }
 }
 
