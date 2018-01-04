@@ -15,18 +15,16 @@ class ContactCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     func setupViews() {
     
-        //Todas as celulas da tabela a direita tem uma zona do tipo accessoryView que esta escondida e neste caso pode ser usada para igualar a um botao para definir a celula como preferida
+        //Todas as celulas da tabela a direita tem uma zona do tipo accessoryView que esta escondida e neste caso
+        //pode ser usada para igualar a um botao para definir a celula como preferida
         let starButton = UIButton(type: .system)
         starButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         starButton.setImage(#imageLiteral(resourceName: "fav_star"), for: .normal)
@@ -39,7 +37,6 @@ class ContactCell: UITableViewCell {
     }
     
     @objc func handleMarkAsFavourite() {
-        print("Cenas")
         link?.someMethod(cell: self)
     }
 }
